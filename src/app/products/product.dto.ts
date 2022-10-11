@@ -4,4 +4,8 @@ export interface CreateProductDto extends Omit<Product,'id'| 'createdAt'|'update
   categoryId: string
 }
 
-type example = Pick<Product,'color' |'description'>
+//type example = Pick<Product,'color' |'description'> selecciona solo esos
+//Partial lo deja todo como opcional
+export interface UpdateProductDto extends Partial<CreateProductDto>{}
+
+//type example2 = Require<Product> Lo deja todo como requerido
