@@ -9,3 +9,7 @@ export interface CreateProductDto extends Omit<Product,'id'| 'createdAt'|'update
 export interface UpdateProductDto extends Partial<CreateProductDto>{}
 
 //type example2 = Require<Product> Lo deja todo como requerido
+
+export interface FindProductDto extends Readonly<Product>{}
+
+//type example3 = Readonly<Product> Para indicar solo lectura

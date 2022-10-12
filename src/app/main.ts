@@ -1,7 +1,7 @@
 import {faker} from '@faker-js/faker'
-import {addProduct,products, updateProduct } from './products/product.service'
+import {addProduct,products, updateProduct,findProducts } from './products/product.service'
 
-for(let index =  0; index<2;index++){
+for(let index =  0; index<50;index++){
   addProduct({
     title:faker.commerce.productName(),
     image:faker.image.imageUrl(),
@@ -25,3 +25,9 @@ updateProduct(product.id,{
   stock: 80,
 })
 console.log(products,'productos todos')
+
+findProducts({
+  stock:10,
+  color:'red',
+  createdAt:new Date()
+})
