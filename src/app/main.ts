@@ -27,7 +27,9 @@ updateProduct(product.id,{
 console.log(products,'productos todos')
 
 findProducts({
-  stock:10,
-  color:'red',
-  createdAt:new Date()
+  stock: 10,
+  color: 'red',
+  createdAt: new Date(),
+  isNew: true,
+  tags: ['as', 'as']
 })
